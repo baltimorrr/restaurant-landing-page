@@ -1,0 +1,82 @@
+.menu {
+    margin-bottom: 200px;
+    &__subtitle {
+        display: block;
+        color: $first-color;
+        font-weight: 500;
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+    }
+    &__title {
+        color: $title-color;
+        font-size: 3.6rem;
+        font-weight: 700;
+        line-height: 1.6;
+        margin-bottom: 48px;
+    }
+    &__subtitle, &__title {
+        text-align: center;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 64px;
+    }
+    &__item {
+        width: 210px;
+        position: relative;
+        background-color: $container-color;
+        box-shadow: 0 2px 12px rgb(3 74 40 / 15%);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        &__image {
+            width: 130px;
+            align-self: center;
+            margin-bottom: 16px;
+        }
+        &__title {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: $title-color;
+            line-height: 1.6;
+        }
+        &__subtitle {
+            font-size: 1.4rem;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        &__price {
+            font-size: 1.4rem;
+            color: $title-color;
+            line-height: 1.6;
+            font-weight: 600;
+        }
+        &__button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-radius: 8px 0 8px 0;
+            background-color: $first-color;
+            color: #fff;
+            padding: 10px 13px;
+            display: flex;
+            transition: all 0.5s ease;
+            i {
+                font-size: 1.6rem;
+            }
+            &:hover {
+                background-color: $first-color-alt;
+            }
+        }
+    }
+    @include maxw(767px) {
+        &__list {
+            flex-wrap: wrap;
+            gap: 2.4rem;
+        }
+    }
+    
+}

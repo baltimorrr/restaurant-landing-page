@@ -1,0 +1,30 @@
+.contact {
+    display: grid;
+    grid-template-columns: 1.75fr 1fr;
+    grid-gap: 1.5rem;
+    margin-bottom: 150px;
+    &__content {
+        &__subtitle {
+            margin-bottom: 8px;
+        }
+        &__title {
+            margin-bottom: 24px;
+        }
+    }
+    &__button {
+        justify-self: center;
+        align-self: center;
+        a:hover {
+            background-color: #048654;
+        }
+    }
+    @include maxw(575px) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        &__content {
+            margin-bottom: 24px;
+        }
+    }
+}
+

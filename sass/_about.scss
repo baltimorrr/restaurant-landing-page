@@ -1,0 +1,60 @@
+.about {
+    padding-top: 128px;
+    margin-bottom: 200px;
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 7rem;
+    }
+    &__image {
+        width: 380px;
+        justify-self: center;
+        img {
+            border-radius: 0.5rem;
+        }
+    }
+    &__content {
+        max-width: 445px;
+        margin: auto 0;
+    }
+    &__subtitle {
+        display: block;
+        color: $first-color;
+        font-weight: 500;
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+    }
+    &__title {
+        font-size: 3.6rem;
+        font-weight: 700;
+        line-height: 1.6;
+        color: $title-color;
+        margin-bottom: 24px;
+    }
+    &__desc {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+    @include maxw(767px) {
+        &__container {
+            column-gap: 1.5rem;
+        }
+        &__image {
+            width: auto;
+        }
+    }
+    @include maxw(575px) {
+        &__container {
+            display: flex;
+            flex-direction: column-reverse;
+            text-align: center;
+            align-items: center;
+            gap: 2.4rem;
+        }
+        &__image {
+            max-width: 280px;
+            width: auto;
+        }
+    }
+}

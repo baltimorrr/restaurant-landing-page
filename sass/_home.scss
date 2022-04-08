@@ -1,0 +1,44 @@
+.home {
+    height: 100vh;
+    &__container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    &__content {
+        max-width: 350px;
+    }
+    &__title {
+        font-size: 6.4em;
+        color: $first-color;
+        margin-bottom: 8px;
+    }
+    &__desc {
+        font-size: 3.6rem;
+        color: $title-color;
+        font-weight: 700;
+        margin-bottom: 32px;
+    }
+    @include maxw(767px) {
+        &__title {
+            font-size: 3.6rem;
+        }
+        &__desc {
+            font-size: 2.4rem;
+        }
+        .btn {
+            font-size: 1.5rem;
+        }
+    }
+    @include maxw(479px) {
+        padding-top: 85px;
+        &__container {
+            grid-template-columns: 1fr;
+        }
+        &__image {
+            max-width: 300px;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.app {
+    display: grid;
+    grid-gap: 7rem;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 100px;
+    &__image {
+        justify-self: center;
+        img {
+            width: 380px;
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 1.6rem;
+        &__subtitle {
+            color: $first-color;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        &__title {
+            font-size: 3.6rem;
+            color: $title-color;
+            font-weight: 700;
+            line-height: 57.6px;
+            margin-bottom: 24px;
+        }
+        &__desc {
+            line-height: 25.6px;
+            margin-bottom: 40px;
+        }
+        &__links {
+            display: flex;
+            column-gap: 1.6rem;
+            img {
+                width: 120px;
+                height: 36px;
+            }
+        }
+    }
+    @include maxw(767px) {
+        grid-gap: 2.4rem;
+    }
+    @include maxw(575px) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        &__content {
+            text-align: center;
+            &__links {
+                display: flex;
+                justify-content: center;
+            }
+        }
+        &__image {
+            max-width: 230px;
+            margin-top: 40px;
+        }
+    }
+}

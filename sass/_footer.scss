@@ -1,0 +1,52 @@
+.footer {
+    margin-bottom: 80px;
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        font-size: 1.6rem;
+        grid-gap: 1.5rem;
+    }
+    &__logo {
+        font-size: 2rem;
+        color: $first-color;
+        font-weight: 600;
+        margin-bottom: 4px;
+        display: block;
+    }
+    &__desc {
+        font-size: 1.4rem;
+        line-height: 22.4px;
+        margin-bottom: 24px;
+        display: block;
+    }
+    &__social {
+        font-size: 2.4rem;
+        color: $title-color;
+        margin-right: 16px;
+    }
+    &__title {
+        font-size: 2.4rem;
+        color: $title-color;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+    &__link {
+        margin-bottom: 8px;
+        line-height: 25.6px;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+            color: $first-color;
+        }
+    }
+    @include maxw(767px) {
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @include maxw(479px) {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
